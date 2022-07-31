@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8197afed2e28c574cad40f5f2cffa395, type: 3}
+  m_Name: '[Scene Reference Collection] Game'
+  m_EditorClassIdentifier: 
+  _scenesReferences:
+  - _sceneAsset: {fileID: 102900000, guid: 5a041dd18dec71748afe73fb8f4114f5, type: 3}
+    _scenePath: Assets/@Scenes/@General/[Scene] Initialization.unity
+  - _sceneAsset: {fileID: 102900000, guid: 63a9f7803c1122b4283ef8314d911adf, type: 3}
+    _scenePath: Assets/@Scenes/[Scene] Game.unity
+  _sceneReferenceCollections: []

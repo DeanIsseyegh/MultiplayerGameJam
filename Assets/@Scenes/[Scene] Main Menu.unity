@@ -975,6 +975,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: "[Button \u2022 Menu Action]{Variant} Play"
       objectReference: {fileID: 0}
+    - target: {fileID: 250156552193396903, guid: aea9ec36f1c2dd247a318f05ec55057a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 250156552193396903, guid: aea9ec36f1c2dd247a318f05ec55057a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadSceneReferenceCollection
+      objectReference: {fileID: 0}
+    - target: {fileID: 250156552193396903, guid: aea9ec36f1c2dd247a318f05ec55057a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 11400000, guid: 043740ad8d694b54d9a5d4f1eacfa39f, type: 2}
+    - target: {fileID: 250156552193396903, guid: aea9ec36f1c2dd247a318f05ec55057a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: SceneReferenceCollection, com.pixel-lifetime.unity-pixli-scene-management
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aea9ec36f1c2dd247a318f05ec55057a, type: 3}
 --- !u!224 &1614958193 stripped
@@ -1158,7 +1174,7 @@ Animator:
   m_GameObject: {fileID: 1732929543}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 29ed1c49accc63944af9f6ddd997001e, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1245,7 +1261,7 @@ Animator:
   m_GameObject: {fileID: 1788544190}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 29ed1c49accc63944af9f6ddd997001e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1761,6 +1777,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: '[View] Audio Settings'
       objectReference: {fileID: 0}
+    - target: {fileID: 6332685962959198215, guid: 58f642ce7352e554ba376b2aad2296fd, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 29ed1c49accc63944af9f6ddd997001e, type: 2}
     - target: {fileID: 7881187503093408018, guid: 58f642ce7352e554ba376b2aad2296fd, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
