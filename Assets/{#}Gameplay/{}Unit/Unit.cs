@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using PixLi;
 using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent))]
-public abstract class Unit : MonoBehaviour
+public abstract class Unit : LivingEntity
 {
 	[SerializeField] protected UnitStats unitStats;
 	public UnitStats _UnitStats => this.unitStats;
