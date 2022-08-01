@@ -16,6 +16,25 @@ public class Character : Unit
 		this._onMovementCallbackContext = callbackContext;
 	}
 
+	//[SerializeField] private Ability[] _abilities;
+	//public Ability[] _Abilities => this._abilities;
+
+	[SerializeField] private Ability _mainAbility;
+	public Ability _MainAbility => this._mainAbility;
+
+	[SerializeField] private Transform _abilityInstantiationPoint;
+	public Transform _AbilityInstantiationPoint => this._abilityInstantiationPoint;
+
+	public void OnMain(InputAction.CallbackContext callbackContext)
+	{
+		if (callbackContext.started && this._mainAbility._Cooldown._Finished)
+		{
+			this._mainAbility.Activate(character: this);
+
+			this._mainAbility._Cooldown.Reset();
+		}
+	}
+
 	private void Update()
 	{
 		Vector2 movementInput = this._onMovementCallbackContext.ReadValue<Vector2>();
