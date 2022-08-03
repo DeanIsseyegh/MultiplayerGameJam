@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-1707882167479587957
+--- !u!114 &-7047022646579549359
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,9 +20,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: '[Material] Health Bar'
-  m_Shader: {fileID: 4800000, guid: 93f17169db52cb148a0b07afd38b15c2, type: 3}
-  m_ShaderKeywords: 
+  m_Name: '[Material] Health Bar Pro {Character}'
+  m_Shader: {fileID: 4800000, guid: 317e1701a43b75e4b88bb8ce983a9354, type: 3}
+  m_ShaderKeywords: _SHAPE_CIRCLE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
@@ -57,7 +57,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 2402fdf6ffbcaff4e83409ed89caccf7, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -100,7 +100,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 1
-    - _Fill: 0.5
+    - _Fill: 0
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
@@ -110,7 +110,8 @@ Material:
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _ScaleX: 2
-    - _ScaleY: 0.4
+    - _ScaleY: 2
+    - _Shape: 0
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -118,9 +119,21 @@ Material:
     - _Surface: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
+    - _borderWidth: 0.053
+    - _endThreshold: 0.781
+    - _healthNormalized: 0
+    - _lowLifeThreshold: 0.3
+    - _startThreshold: 0.39
+    - _waveAmp: 0.02
+    - _waveFreq: 5
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _Offset: {r: 0, g: 2, b: 2.58, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _backgroundColor: {r: 0, g: 0, b: 0, a: 0.5372549}
+    - _borderColor: {r: 0.09999997, g: 0.09999997, b: 0.09999997, a: 1}
+    - _endColor: {r: 0.290538, g: 1, b: 0.27058828, a: 1}
+    - _startColor: {r: 1, g: 0.27058825, b: 0.27058825, a: 1}
   m_BuildTextureStacks: []
