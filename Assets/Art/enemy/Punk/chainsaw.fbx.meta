@@ -6,7 +6,37 @@ ModelImporter:
   - first:
       74: -8515560403302317629
     second: Cube.001|Cube.001Action
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blue
+    second: {fileID: 2100000, guid: 494b9a3033aa8284d934e8ac26bac34e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dark_Gray
+    second: {fileID: 2100000, guid: 82b69c2822b6fba48a1631fe062b8862, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Detail
+    second: {fileID: 2100000, guid: c9ed966b68377574fa60ba2d8b121a83, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hair
+    second: {fileID: 2100000, guid: 7da51d87f03d08a439987033b2c910da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal
+    second: {fileID: 2100000, guid: e451a00abfd88a242b18e8d57944ccef, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_chainsaw
+    second: {fileID: 2100000, guid: 178ec5221319847438ec1838cc4c883a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -17,7 +47,7 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
-    motionNodeName: 
+    motionNodeName: <Root Transform>
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
