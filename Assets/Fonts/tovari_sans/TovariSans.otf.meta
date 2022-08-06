@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: cbd5eae6f33f3ef47b418a2e25e7b052
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Tovari Sans
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 53351c9e51ce6524aa3943aae5cafd13, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
