@@ -11,7 +11,7 @@ using UnityEditor;
 
 public abstract class SpawnPointBase : MonoBehaviour
 {
-	public abstract GameObject Spawn(SpawnWave spawnWave);
+	public abstract GameObject Spawn(SpawnWave.Data spawnWaveData);
 
 #if UNITY_EDITOR
 	//protected override void OnDrawGizmos()
@@ -22,10 +22,10 @@ public abstract class SpawnPointBase : MonoBehaviour
 
 public class SpawnPoint : SpawnPointBase
 {
-	public override GameObject Spawn(SpawnWave spawnWave)
+	public override GameObject Spawn(SpawnWave.Data spawnWaveData)
 	{
-		GameObject spawnedObject = Object.Instantiate(spawnWave._SpawnSharedData._Prefab, this.transform.position + spawnWave._SpawnSharedData._Offset, Quaternion.identity, this.transform);
-			
+		GameObject spawnedObject = Object.Instantiate(spawnWaveData._SpawnSharedData._Prefab, this.transform.position + spawnWaveData._SpawnSharedData._Offset, Quaternion.identity, this.transform);
+
 		return spawnedObject;
 	}
 

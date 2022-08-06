@@ -13,10 +13,10 @@ using UnityEditor;
 public class SpawnSharedData : ScriptableObject
 {
 	[SerializeField] private GameObject _prefab;
-	public GameObject _Prefab { get { return this._prefab; } }
+	public GameObject _Prefab => this._prefab;
 
 	[SerializeField] private Vector3 _offset;
-	public Vector3 _Offset { get { return this._offset; } }
+	public Vector3 _Offset => this._offset;
 
 #if UNITY_EDITOR
 	//protected override void OnDrawGizmos()

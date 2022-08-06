@@ -19,8 +19,8 @@ public class Character : Unit
 	//[SerializeField] private Ability[] _abilities;
 	//public Ability[] _Abilities => this._abilities;
 
-	[SerializeField] private Ability _mainAbility;
-	public Ability _MainAbility => this._mainAbility;
+	[SerializeField] private Ability<Character> _mainAbility;
+	public Ability<Character> _MainAbility => this._mainAbility;
 
 	[SerializeField] private Transform _abilityInstantiationPoint;
 	public Transform _AbilityInstantiationPoint => this._abilityInstantiationPoint;
@@ -29,7 +29,7 @@ public class Character : Unit
 	{
 		if (callbackContext.started && this._mainAbility._Cooldown._Finished)
 		{
-			this._mainAbility.Activate(character: this);
+			this._mainAbility.Activate(data: this);
 
 			this._mainAbility._Cooldown.Reset();
 		}

@@ -4,7 +4,7 @@ using PixLi;
 using UnityEngine;
 
 [System.Serializable]
-public class Ability
+public class Ability<T>
 {
 	[SerializeField] private Cooldown _cooldown;
 	public Cooldown _Cooldown => this._cooldown;
@@ -13,13 +13,8 @@ public class Ability
 	public AbilitySharedData _AharedData => this._sharedData;
 
 	//TODO: Rename it to something like Applicator etc. Generalize the behaviour class that can modify target - like: Applicator<Character>.
-	[SerializeField] private AbilityBehaviour<Character> _behaviourPrefab;
-	public AbilityBehaviour<Character> _BehaviourPrefab => this._behaviourPrefab;
+	[SerializeField] private AbilityBehaviour<T> _abilityBehaviour;
+	public AbilityBehaviour<T> _AbilityBehaviour => this._abilityBehaviour;
 
-	public void Activate(Character character)
-	{
-		AbilityBehaviour<Character> abilityBehaviour = Object.Instantiate(original: this._behaviourPrefab);
-
-		abilityBehaviour.Apply(entity: character);
-	}
+	public void Activate(T data) => this._abilityBehaviour.Apply(data: data);
 }

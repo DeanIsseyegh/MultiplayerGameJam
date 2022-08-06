@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class AbilityBehaviour<TEntity> : MonoBehaviour
+public abstract class AbilityBehaviour<T> : ScriptableObject
 {
-	public abstract void Apply(TEntity entity);
+	public abstract void Apply(T data);
 }

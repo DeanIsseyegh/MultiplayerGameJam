@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6a41a5b05e34d141b6a33e0bb6cf95c, type: 3}
   m_Name: '[Spawn Wave] (0)'
   m_EditorClassIdentifier: 
-  _spawnSharedData: {fileID: 11400000, guid: 37efd3e3b8def4b4da5bb439ce172457, type: 2}
-  _quantity: 5
+  _data:
+  - _spawnSharedData: {fileID: 11400000, guid: 37efd3e3b8def4b4da5bb439ce172457, type: 2}
+    _quantity: 5
+  - _spawnSharedData: {fileID: 11400000, guid: f7ac929b917e5d5468b00641a3400610, type: 2}
+    _quantity: 2
   _deltaTimeBetweenSpawns: 2
-  _delayBeforeWaveStartSpawning: 0
+  _delayBeforeWaveStartSpawning: 5
