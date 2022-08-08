@@ -12,7 +12,7 @@ using UnityEditor;
 namespace PixLi
 {
 	[System.Serializable]
-	[CreateAssetMenu(fileName = "name Inventory", menuName = "Inventory/Inventory", order = 1)]
+	[CreateAssetMenu(fileName = "[Inventory]", menuName = "[Inventory System]/[Inventory]", order = 1)]
 	public class Inventory : ScriptableObject
 	{
 		private const int DEFAULT_SLOT_INDEX = -1;
@@ -24,10 +24,10 @@ namespace PixLi
 		private int _itemsQuantity;
 
 		[SerializeField] private int _size = 1;
-		public int _Size { get { return this._size; } }
+		public int _Size => this._size;
 
 		[SerializeField] private int _capacity = 1;
-		public int _Capacity { get { return this._capacity; } }
+		public int _Capacity => this._capacity;
 
 		public void Initialize(int size, int capacity)
 		{
@@ -287,7 +287,7 @@ namespace PixLi
 		private InventoryItem _item;
 		public InventoryItem Item
 		{
-			get { return this._item; }
+			get => this._item;
 			set
 			{
 				if (value != null)

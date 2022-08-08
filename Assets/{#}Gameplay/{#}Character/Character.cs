@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using PixLi;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(PlayerInput))]
-public class Character : Unit
+public class Character : Unit, IInventoryHolder
 {
+	[SerializeField] private Inventory _inventory;
+	public Inventory _Inventory => this._inventory;
+
 	[SerializeField] private PlayerInput _playerInput;
 	public PlayerInput _PlayerInput => this._playerInput;
 

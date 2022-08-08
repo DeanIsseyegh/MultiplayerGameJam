@@ -17,7 +17,7 @@ namespace PixLi
 	where TInventoryItemSharedData : InventoryItemSharedData
 	{
 		[SerializeField] protected TInventoryItemSharedData inventoryItemSharedData;
-		public TInventoryItemSharedData _InventoryItemSharedData { get { return this.inventoryItemSharedData; } }
+		public TInventoryItemSharedData _InventoryItemSharedData => this.inventoryItemSharedData;
 
 		[SerializeField] protected UnityEvent onInventoryItemPointerDown;
 
@@ -27,24 +27,13 @@ namespace PixLi
 				Object.Destroy(this.gameObject);
 		}
 
-		public void AddToInventory(IInventoryHolder inventoryHolder) { this.AddToInventory(inventoryHolder._Inventory); }
-		public void AddToInventory(Collider collider) { this.AddToInventory(collider.GetComponent<IInventoryHolder>()); }
-		public void AddToInventory(Collider2D collider2D) { this.AddToInventory(collider2D.GetComponent<IInventoryHolder>()); }
+		public void AddToInventory(IInventoryHolder inventoryHolder) => this.AddToInventory(inventory: inventoryHolder._Inventory);
+		public void AddToInventory(Collider collider) => this.AddToInventory(inventoryHolder: collider.GetComponent<IInventoryHolder>());
+		public void AddToInventory(Collider2D collider2D) => this.AddToInventory(inventoryHolder: collider2D.GetComponent<IInventoryHolder>());
 
-		public virtual void Interact(Collider component)
-		{
-			this.AddToInventory(component);
-		}
-
-		public virtual void Interact(Collider2D component)
-		{
-			this.AddToInventory(component);
-		}
-
-		public virtual void Interact(Object @object)
-		{
-			this.AddToInventory(@object as IInventoryHolder);
-		}
+		public virtual void Interact(Collider component) => this.AddToInventory(collider: component);
+		public virtual void Interact(Collider2D component) => this.AddToInventory(collider2D: component);
+		public virtual void Interact(Object @object) => this.AddToInventory(inventoryHolder: @object as IInventoryHolder);
 
 #if UNITY_EDITOR
 		//protected override void OnDrawGizmos()

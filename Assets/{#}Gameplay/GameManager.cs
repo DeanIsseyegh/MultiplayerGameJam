@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
 	[SerializeField] private Stage[] _stages;
 	//public Stage[] _Stages => this._stages;
 
-	public int CurrentStageIndex_ { get; private set; }
+	public int CurrentStageIndex_ { get; private set; } = -1;
 
 	[SerializeField] private View _gameOverView;
 	public View _GameOverView => this._gameOverView;
@@ -48,17 +48,23 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
 		this._onStageWon.Invoke();
 
 		this._winStageView.Show();
+
+		this.StartCoroutine(
+			CoroutineProcessorsCollection.InvokeAfterRealtime(
+				seconds: 3,
+				action: () => this._winStageView.Hide()
+			)
+		);
 	}
 
-	public void StartNextWave()
+	private void StartNextWave(ref Stage stage)
 	{
-		Stage stage = this._stages[this.CurrentStageIndex_];
-
 		if (stage.NextWaveIndex < stage._Waves.Length)
 			this._spawner.SpawnWave(spawnWave: stage._Waves[stage.NextWaveIndex++]);
 		else
 			this.WinStage();
 	}
+	public void StartNextWave() => this.StartNextWave(stage: ref this._stages[this.CurrentStageIndex_]);
 
 	[SerializeField] private UnityEvent _onStageStart;
 	public UnityEvent _OnStageStart => this._onStageStart;
@@ -68,6 +74,8 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
 		Time.timeScale = 1.0f;
 
 		this.CurrentStageIndex_ = stageIndex;
+
+		this._stages[this.CurrentStageIndex_].NextWaveIndex = 0;
 
 		this.StartNextWave();
 

@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 1650479325715550598}
   - component: {fileID: 6695269311753111958}
   - component: {fileID: 6695269311753111959}
+  - component: {fileID: 1345386776445451297}
+  - component: {fileID: 4690985676426659831}
   m_Layer: 0
   m_Name: seed_pickupable_final
   m_TagString: Untagged
@@ -123,6 +125,35 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &1345386776445451297
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5776770486798349509}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.13815759, y: 0.040619228, z: 0.0681378}
+  m_Center: {x: 0.0010086074, y: 0.00010410602, z: 0.032002117}
+--- !u!114 &4690985676426659831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5776770486798349509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 651310c362932354d81e39d003b18fd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryItemSharedData: {fileID: 11400000, guid: 1737676aecbec8a4797a42af52806f33, type: 2}
+  onInventoryItemPointerDown:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &6695269311770573689
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -18,4 +18,4 @@ MonoBehaviour:
   - _spawnSharedData: {fileID: 11400000, guid: f7ac929b917e5d5468b00641a3400610, type: 2}
     _quantity: 2
   _deltaTimeBetweenSpawns: 2
-  _delayBeforeWaveStartSpawning: 5
+  _delayBeforeWaveStartSpawning: 1

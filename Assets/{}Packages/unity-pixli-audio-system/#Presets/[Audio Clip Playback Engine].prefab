@@ -44,6 +44,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioClip: {fileID: 0}
-  _audioSourcePlayer: {fileID: 0}
+  _audioSourcePlayer: {fileID: 3285925778131587845, guid: 4ab2e61d2b438c043acf2492d3500247, type: 3}
   _playOnStart: 0
   _loop: 0
+  _onStoppedPlaying:
+    m_PersistentCalls:
+      m_Calls: []

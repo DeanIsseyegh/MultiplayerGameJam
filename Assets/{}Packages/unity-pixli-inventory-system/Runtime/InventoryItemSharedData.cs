@@ -14,7 +14,7 @@ using UnityEditor;
 namespace PixLi
 {
 	[System.Serializable]
-	[CreateAssetMenu(fileName = "name Item Shared Data", menuName = "Inventory/Item Shared Data", order = 1)]
+	[CreateAssetMenu(fileName = "[Inventory Item Shared Data]", menuName = "[Inventory System]/[Inventory Item Shared Data]", order = 1)]
 	public class InventoryItemSharedData : ScriptableObject
 	{
 		public int Id { get; set; }
